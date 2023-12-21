@@ -29,13 +29,13 @@ public class ProductController {
         return service.getProducts();
     }
 
-    @GetMapping("/product/{id}")
+    @GetMapping("/productById/{id}")
     public Product findProductById(@PathVariable int id){
         return service.getProductById(id);
     }
 
     @GetMapping("/product/{name}")
-    public Product findProductByName(String name){
+    public Product findProductByName(@PathVariable String name){
         return service.getProductByName(name);
     }
 
